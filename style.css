@@ -1,0 +1,22 @@
+body{
+    background-image: url(background.jpg);
+}
+h3{
+    font-size: 35px !important;
+}
+
+.btn-success:hover{
+    background-color: #d5bdaf;
+    color:#84a59d;
+}
+
+canvas{
+    animation-name: hi;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hi{
+    from{box-shadow:10px 10px 20px #fb5607; }
+    to{box-shadow: 10px 10px 20px #ff006e;}
+}
