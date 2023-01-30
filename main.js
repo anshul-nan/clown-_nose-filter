@@ -1,6 +1,6 @@
 function preload()
 {
-
+clown_nose=loadImage('https://i.postimg.cc/L88QX8P7/image-removebg-preview.png')
 }
 
 function setup()
@@ -19,6 +19,7 @@ function modelLoaded(){
 }
 function draw(){
      image(video,0,0,300,300);
+     image(clown_nose,nose_x,nose_y,30,30);
 }
 function take_snapshot(){
     save('my_picture.jpg')
@@ -31,9 +32,9 @@ function gotPoses(results)
     if(results.length>0)
     {
         console.log(results);
-        nose_x = results[0].pose.nose.x;
+        nose_x = results[0].pose.nose.x-18;
         console.log('nose x = '+nose_x);
-        nose_y = results[0].pose.nose.y;
+        nose_y = results[0].pose.nose.y-9;
         console.log('nose_y = '+ nose_y);
     }
 }
